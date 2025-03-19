@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0f743fab.css",
+    "main.js": "/static/js/main.cbf28a0b.js",
+    "static/js/453.9ea67fec.chunk.js": "/static/js/453.9ea67fec.chunk.js",
+    "static/media/finance-definition.jpg": "/static/media/finance-definition.c7d888cdd692c7c9be13.jpg",
+    "index.html": "/index.html",
+    "main.0f743fab.css.map": "/static/css/main.0f743fab.css.map",
+    "main.cbf28a0b.js.map": "/static/js/main.cbf28a0b.js.map",
+    "453.9ea67fec.chunk.js.map": "/static/js/453.9ea67fec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f743fab.css",
+    "static/js/main.cbf28a0b.js"
+  ]
+}
