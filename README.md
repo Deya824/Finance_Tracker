@@ -1,6 +1,6 @@
 # Finance_Tracker
 Finance Tracker app
-#Credits
+
 ### Tutorial Basis
 This project was developed following:  
 **"React JS Course for Beginners"** by [Lama Dev](https://www.youtube.com/@LamaDev)  
