@@ -1,41 +1,52 @@
-const userModel = require("../models/userModel");
+const userSchema = require("../models/userModel");
 
-//login callback
-const loginController = async (req, res) => {
+// Authentication functions
+const authHandler = {
+  userLogin: async (request, response) => {
     try {
-        const { email, password } = req.body;
-        const user = await userModel.findOne({ email, password });
-        if (!user) {
-            return res.status(404).send("User Not Found");
-        }
-        res.status(200).json({
-            success: true,
-            user,
+      const { userEmail, userPassword } = request.body;
+      const account = await userSchema.findOne({ 
+        email: userEmail, 
+        password: userPassword 
+      });
+      
+      if (!account) {
+        return response.status(404).json({
+          status: false,
+          message: "Account not found"
         });
+      }
+      
+      response.status(200).json({
+        status: true,
+        accountData: account
+      });
+      
+    } catch (err) {
+      response.status(400).json({
+        status: false,
+        error: err
+      });
     }
-    catch (error) {
-        res.status(400).json({
-            success: false,
-            error,
-        });
-    }
-};
-//register callback
-const registerController = async (req, res) => {
+  },
 
+  userSignup: async (request, response) => {
     try {
-        const newUser = new userModel(req.body);
-        await newUser.save();
-        res.status(201).json({
-            success: true,
-            newUser,
-        });
+      const newAccount = new userSchema(request.body);
+      await newAccount.save();
+      
+      response.status(201).json({
+        status: true,
+        createdAccount: newAccount
+      });
+      
+    } catch (err) {
+      response.status(400).json({
+        status: false,
+        error: err
+      });
     }
-    catch (error) {
-        res.status(400).json({
-            success: false,
-            error,
-        });
-    }
+  }
 };
-module.exports = { loginController, registerController };
+
+module.exports = authHandler;
