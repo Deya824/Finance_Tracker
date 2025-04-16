@@ -2,28 +2,28 @@
 
 A personal finance tracking application built with React.js.
 
-## 🚀 Live Demo
+## Live Demo
 
 The project is deployed and live at:  
 🔗 [Finance Tracker Live Demo](https://finance-tracker-9.onrender.com/)
 
-## 📚 Learning Experience
+## Learning Experience
 
 This project was created as part of my React.js learning process through the **"React JS Course for Beginners"** tutorial series by [Lama Dev](https://www.youtube.com/@LamaDev).  
 🔗 [Original Tutorial Playlist](https://www.youtube.com/playlist?list=PLuHGmgpyHfRw1eJL5-2L0W1XsUVTTCEMh)
 
-### 🛠️ Core Skills Practiced
+###  Core Skills Practiced
 Through building this finance tracker, I:
 - Implemented React component architecture
 - Mastered state management using hooks (useState, useEffect)
 - Developed responsive UI components
 - Learned modern React best practices
 
-### 🎓 Educational Value
+###  Educational Value
 This implementation served as:
 - Hands-on practice for fundamental React concepts
 - A real-world application of tutorial knowledge
 - Foundation for future project enhancements
 
-### 📝 Attribution Note
+###  Attribution Note
 This project represents my personal learning journey in React development.
