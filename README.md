@@ -1,5 +1,11 @@
-# Finance_Tracker
-Finance Tracker app
+# Finance Tracker
+
+A personal finance tracking application built with React.js.
+
+## 🚀 Live Demo
+
+The project is deployed and live at:  
+🔗 [Finance Tracker Live Demo](https://finance-tracker-9.onrender.com/)
 
 ## 📚 Learning Experience
 
