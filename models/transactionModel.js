@@ -1,34 +1,38 @@
-const mongoose= require('mongoose');
-const transectionSchema=new mongoose.Schema({
-   userid:{
-      type:String,
-     required:true, 
-   },
-   
- amount:{
-    type:Number,
-    required:[true,'amount is required']
- },
- type:{
-type:String,
-required:[true,'type is required']
- },
- category:{
-    type:String,
-required:[true,'cat is required']
- },
- refrence:{
-    type:String,
+const mongoose = require('mongoose');
 
- },
- description:{
-    type:String,
-    required:[true,'desc is required']
- },
- date:{
-    type:Date,
-required:[true,'date is required']
- }
-},{timestamps:true})
-const transectionModel=mongoose.model('transections',transectionSchema)
-module.exports=transectionModel;
+const financialRecordSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+    required: true
+  },
+  transactionAmount: {
+    type: Number,
+    required: [true, 'Transaction amount is mandatory']
+  },
+  transactionType: {
+    type: String,
+    required: [true, 'Transaction type must be specified']
+  },
+  transactionCategory: {
+    type: String,
+    required: [true, 'Category is mandatory']
+  },
+  transactionNote: {
+    type: String,
+    required: [true, 'Description is required']
+  },
+  paymentReference: {
+    type: String
+  },
+  transactionDate: {
+    type: Date,
+    required: [true, 'Date must be provided']
+  }
+}, {
+  timestamps: true,
+  collection: 'financial_records'
+});
+
+const FinancialRecord = mongoose.model('FinancialRecord', financialRecordSchema);
+
+module.exports = FinancialRecord;
